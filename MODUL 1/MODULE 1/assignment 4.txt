@@ -1,0 +1,237 @@
+Assignment Topic: Arrays
+------------------------------------------------------
+--------------------------------------------------------------------------------------
+B1. Read many names from command line and print all names
+using array. (for loop)
+
+fun main(args: Array<String>) {
+for(i in args){
+println(i)
+}
+}
+B2. WAP to print array using for each loop
+fun main(args: Array<String>)
+{
+    val array = intArrayOf(1, 2, 3, 4, 5)
+
+    for (element in array)
+    {
+        println(element)
+    }
+}
+B3. Kotlin Program to Calculate Average Using Arrays
+fun main(args: Array<String>)
+{
+    var arr = arrayOf(10,10,10,10,10)
+    var sum = 0
+    for(i in arr)  sum = sum + i
+    println("Average of number is ${sum/arr.size}")
+}
+B4. Kotlin Program to Find Largest Element in an Array
+
+fun main(args: Array<String>) {
+var arr = arrayOf(1,2,4,5,6,7)
+var max = 0
+for(i in arr) {
+if (i >= max){
+max = i
+}
+else
+max
+}
+println("largest number is ${max}")
+}
+B5. Kotlin Program to Calculate Standard Deviation
+fun main(args: Array<String>) 
+{
+val Arr = doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0)
+val SD = calculate(Arr)
+System.out.format("Standard Deviation = %.2f", SD)
+}
+fun calculate(arr: DoubleArray): Double
+ {
+var sum = 0.0
+var sd = 0.0
+for (num in arr) 
+{
+sum += num
+}
+val mean = sum / 10
+for (num in arr)
+{
+sd += Math.pow(num - mean, 2.0)
+}
+B6.Kotlin Program to Add Two Matrix
+UsingMultidimensionalArrays
+fun main(args: Array<String>)
+{
+    val rows = 2
+    val columns = 3
+    val firstMatrix = arrayOf(intArrayOf(2, 3, 4), intArrayOf(5, 2, 3))
+    val secondMatrix = arrayOf(intArrayOf(-4, 5, 3), intArrayOf(5, 6, 3))
+      val sum = Array(rows)
+      {
+          IntArray(columns)
+    }
+    for (i in 0..rows - 1)
+    {
+        for (j in 0..columns - 1)
+        {
+            sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j]
+        }
+    }
+   println("Sum of two matrices is: ")
+    for (row in sum)
+    {
+        for (column in row)
+        {
+            print("$column    ")
+        }
+        println()
+    }
+}
+B7. Kotlin Program to Multiply to Matrix Using
+Multidimensional Arrays
+fun main(args: Array<String>) 
+{
+val m1 = arrayOf(intArrayOf(1, 2, 3), intArrayOf(1,2,3))
+val m2 = arrayOf(intArrayOf(1,2), intArrayOf(1,2), intArrayOf(1,2))
+
+val product = Array(2) { IntArray(2) }
+for (i in 0..2 - 1) 
+{
+for (j in 0..2 - 1)
+ {
+for (k in 0..3 - 1) 
+{
+product[i][j] += m1[i][k] * m2[k][j]
+}
+}
+B8. Kotlin Program to Multiply two Matrices by Passing Matrix
+to a Function
+fun main(args: Array<String>) 
+{
+val m1 = arrayOf(intArrayOf(1, 2, 3), intArrayOf(1,2,3))
+val m2 = arrayOf(intArrayOf(1,2), intArrayOf(1,2), intArrayOf(1,2))
+multi(m1,m2)
+}
+
+fun multi(m1: Array<IntArray>, m2:Array<IntArray>)
+{
+val product = Array(2) { IntArray(2) }
+for (i in 0..2 - 1)
+ {
+for (j in 0..2 - 1) 
+{
+for (k in 0..3 - 1) 
+{
+product[i][j] += m1[i][k] * m2[k][j]
+
+}
+}
+}
+println("Product of two matrices is: ")
+for (r in product) 
+{
+for (c in r) 
+{
+print("$c ")
+}
+println()
+}
+}
+{
+for (c in r) 
+{
+print("$c ")
+}
+println()
+}
+}
+B9. Kotlin Program to Find Transpose of a Matrix
+fun main(args: Array<String>) 
+{
+val row = 2
+val column = 3
+val matrix = arrayOf(intArrayOf(1,2,3), intArrayOf(1,2,3))
+val transpose = Array(column) { IntArray(row) }
+for (i in 0..row - 1) 
+{
+for (j in 0..column - 1) 
+{
+transpose[j][i] = matrix[i][j]
+}
+}
+display(transpose)
+}
+fun display(matrix: Array<IntArray>) 
+{
+println("The matrix is: ")
+for (row in matrix) 
+{
+for (column in row) 
+{
+print("$column ")
+}
+println()
+}
+}
+
+B10. Kotlin Program to Print anArray
+fun main(args: Array<String>) 
+{
+val arr = arrayOf(1,2,3,4,)
+for(i in arr)
+{
+println(i)
+}
+}
+B11. Kotlin Program to Concatenate Two Arrays
+fun main(args: Array<String>) 
+{
+val arr = arrayOf(1,2,3,4,)
+val arr2 = arrayOf(1,2,3,4,)
+for(i in arr)
+{
+println(i)
+}
+for(j in arr2)
+{
+println(j)
+}
+}
+
+B12. Kotlin Program to Convert Character to String and
+ViceVersa
+fun main(args: Array<String>) 
+{
+val arr = arrayOf('a','b','c','d')
+var string = ""
+for (i in arr) string = string + i
+
+println(string)
+for (i in 0..arr.size-1)
+{
+arr[i] = string[i]
+}
+for (i in arr)
+{
+println(i)
+}
+}
+
+B13. Kotlin Program to Check if An Array Contains aGiven
+Value
+fun main(args: Array<String>)
+ {
+val arr = arrayOf('a','b','c','d')
+val a = 'c'
+for (i in 0..arr.size-1)
+{
+if (arr[i] == a)
+{
+println("your value is at position $i in array")
+}
+}
+}
+***************************.

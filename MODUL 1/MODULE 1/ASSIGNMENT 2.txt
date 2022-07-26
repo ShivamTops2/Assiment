@@ -1,0 +1,405 @@
+**********************************************************
+Assignment Topic: Decision Making and Loop
+----------------------------------------------------------------------------------------------------
+Assignment Level Basic
+---------------------------------------------------------------------------------------
+
+B1. WAP to print all command line argument using while and do…while loop (while, do…while) 
+fun main(args: Array<String>) 
+{ 
+var i = 0 
+while(i < args.size)
+{ 
+ println(args[i]) 
+ i++ 
+} 
+} 
+B2. Read language code from command line and print “Hello” if EN , print “Salut” if FR, print “Ciao” if IT.  (when)  
+fun main(args: Array<String>) 
+{ 
+when(args[3])
+{ 
+"EN" -> println("English") 
+"FR" -> println("SALUT") 
+"IT" -> println("CIAO ") 
+else -> println("we did not find code") 
+} 
+} 
+B3. Kotlin Program to Check Whether an Alphabet is Vowel or Consonant 
+fun main(args: Array<String>) 
+{
+
+    val ch = 'i'
+
+    val vowelConsonant = if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') "vowel" else "consonant"
+
+    println("$ch is $vowelConsonant")
+}
+B4. Kotlin Program to Find the Largest Among Three Numbers 
+fun main(args: Array<String>) 
+{
+
+    val n1 = -4.5
+    val n2 = 3.9
+    val n3 = 2.5
+
+    if (n1 >= n2 && n1 >= n3)
+        println("$n1 is the largest number.")
+    else if (n2 >= n1 && n2 >= n3)
+        println("$n2 is the largest number.")
+    else
+        println("$n3 is the largest number.")
+}
+B5. ???????????
+
+B6. Kotlin Program to Check Leap Year  
+fun main(args: Array<String>) 
+{ 
+println("enter your number :") 
+val a = readln().toInt() 
+if (a%4 ==0) 
+ println("$a is a leap year")
+else println("$a is not a leap year") 
+} 
+B7. Kotlin Program to Check Whether a Number is Positive or Negative 
+fun main(args: Array<String>)
+{
+
+    val number = 12.3
+
+    if (number < 0.0)
+        println("$number is a negative number.")
+    else if (number > 0.0)
+        println("$number is a positive number.")
+    else
+        println("$number is 0.")
+}
+B8. Kotlin Program to Check Whether a Character is Alphabet or Not  
+fun main(args: Array<String>)
+{
+
+    val B = '*'
+
+    if (B >= 'a' && B <= 'z' || B >= 'A' && B <= 'Z')
+        println("$B is an alphabet.")
+    else
+        println("$B is not an alphabet.")
+}
+B9. Kotlin Program to Calculate the Sum of Natural Numbers 
+fun main(args: Array<String>) 
+{ 
+println("enter your 1st number :") 
+val a = readln().toInt() 
+println("enter your 2nd number :") 
+val b = readln().toInt() 
+println("Sum of two numbet is ${a.plus(b)}") 
+}
+B10)Kotlin Program to Find Factorial of aNumber
+fun main(args: Array<String>)
+ {
+
+    val num = 10
+    var factorial: Long = 1
+    for (i in 1..num) 
+{
+        factorial *= i.toLong()
+    }
+    println("Factorial of $num = $factorial")
+}
+B11).Kotlin Program to Generate Multiplication Table
+fun main(args: Array<String>) 
+{
+    val num = 25
+
+    for (i in 1..10)
+ {
+        val product = num * i
+        println("$num * $i = $product")
+    }
+}
+B12).Display Fibonacci series using for loop
+fun main(args: Array<String>)
+{
+    val n = 10
+    var t1 = 0
+    var t2 = 1
+    
+    print("First $n terms: ")
+
+    for (i in 1..n) 
+{
+        print("$t1 + ")
+
+        val sum = t1 + t2
+        t1 = t2
+        t2 = sum
+    }
+}
+B13).Kotlin Program to Find GCD of twoNumbers
+fun main(args: Array<String>)
+ {
+    val n1 = 20
+    val n2 = 92
+    var gcd = 1
+
+    var i = 1
+    while (i <= n1 && i <= n2)
+ {
+        if (n1 % i == 0 && n2 % i == 0)
+            gcd = i
+        ++i
+    }
+
+    println("G.C.D of $n1 and $n2 is $gcd")
+}
+B14).Kotlin Program to Find LCM of twoNumbers
+fun main(args: Array<String>) 
+{
+    val n1 = 72
+    val n2 = 120
+    var lcm: Int
+
+    lcm = if (n1 > n2) n1 else n2
+
+ 
+    while (true) {
+        if (lcm % n1 == 0 && lcm % n2 == 0) 
+{
+            println("The LCM of $n1 and $n2 is $lcm.")
+            break
+        }
+        ++lcm
+    }
+}
+B15).Kotlin Program to Display Characters from A to Z using
+loop
+fun main(args: Array<String>) 
+{
+    var c: Char
+
+    c = 'A'
+    while (c <= 'Z') 
+{
+        print("$c ")
+        ++c
+    }
+}
+B16).Kotlin Program to Count Number of Digits in an Integer
+fun main(args: Array<String>)
+ {
+    var count = 0
+    var num = 123456789
+
+    while (num != 0) 
+{
+        num /= 10
+        ++count
+    }
+
+    println("Number of digits: $count")
+}
+B17). Kotlin Program to Reverse aNumber
+fun main(args: Array<String>)
+{   
+var num = 123456789
+    var reversed = 0
+
+    while (num != 0) 
+{
+        val digit = num % 10
+        reversed = reversed * 10 + digit
+        num /= 10
+    }
+
+    println("Reversed Number: $reversed")
+}
+B18).Kotlin Program to Calculate the Power of aNumber
+fun main(args: Array<String>) 
+{
+    var num = 121
+    var reversedInteger = 0
+    var remainder: Int
+    val originalInteger: Int
+
+    originalInteger = num
+    while (num != 0) 
+{
+        remainder = num % 10
+        reversedInteger = reversedInteger * 10 + remainder
+        num /= 10
+    }
+   if (originalInteger == reversedInteger)
+        println("$originalInteger is a palindrome.")
+    else
+        println("$originalInteger is not a palindrome.")
+}
+B19).Kotlin Program to Check Whether a Number is Primeor
+Not
+fun main(args: Array<String>) 
+{
+    val num = 29
+    var flag = false
+    for (i in 2..num / 2) 
+{
+        if (num % i == 0)
+ {
+            flag = true
+            break
+        }
+    }
+
+    if (!flag)
+        println("$num is a prime number.")
+    else
+        println("$num is not a prime number.")
+}
+B20).Kotlin Program to Display Prime Numbers Between Two
+Intervals
+fun main(args: Array<String>) 
+{
+    var low = 20
+    val high = 50
+
+    while (low < high) 
+
+{
+        var flag = false
+        for (i in 2..low / 2) 
+{
+            if (low % i == 0) 
+{
+                flag = true
+                break
+            }
+        }
+
+        if (!flag)
+            print("$low ")
+
+        ++low
+    }
+}
+B21).Kotlin Program to Check ArmstrongNumber
+fun main(args: Array<String>
+{
+    val number = 371
+    var originalNumber: Int
+    var remainder: Int
+    var result = 0
+
+    originalNumber = number
+
+    while (originalNumber != 0) 
+{
+    remainder = originalNumber % 10
+        result += Math.pow(remainder.toDouble(), 3.0).toInt()
+        originalNumber /= 10
+    }
+
+    if (result == number)
+        println("$number is an Armstrong number.")
+    else
+        println("$number is not an Armstrong number.")
+}
+
+B22)Kotlin Program to Display Armstrong Number Between
+Two Intervals
+???????!!!!!!!?!?!?!?!?!?!!?!?
+
+B23).Kotlin Program to Display Factors of a Number
+fun main(args: Array<String>) 
+{
+    val number = 60
+
+    print("Factors of $number are: ")
+    for (i in 1..number) 
+{
+        if (number % i == 0) 
+{
+            print("$i ")
+        }
+    }
+}
+B24)Kotlin Program to Make a Simple CalculatorUsing switch...case
+fun main(args: Array<String>)
+ {
+println("enter your number : ")
+val a = readln().toInt()
+println("enter your number : ")
+val b = readln().toInt()
+println("what operation you want : ")
+val op = readln()
+when(op)
+{
+'+'.toString() ->println( a.plus(b))
+'-'.toString() -> println( a.minus(b))
+'*'.toString() -> println( a.times(b))
+'/'.toString() -> println( a.div(b))
+else -> println("enter valid operation")
+}
+}
+
+B25)Kotlin Program to Count the Number of Vowels and Consonants in a Sentence
+?????????
+
+B26). Kotlin Program to Sort Elements in Lexicographical Order (Dictionary Order)
+fun main(args: Array<String>) 
+{
+println("enter your String : ")
+val a = readln()
+println("enter your String:")
+val b = readln()
+if (a<b)
+{
+println(a)
+println(b)
+}
+else{
+println(b)
+println(a)
+}
+}
+B27).Kotlin Code To Create Pyramid andPattern
+fun main(args: Array<String>) 
+{
+    val rows = 5
+
+    for (i in 1..rows) 
+{
+        for (j in 1..i) 
+{
+            print("SHIVU   ")
+        }
+        println()
+    }
+}
+-----+-------
+fun main(args: Array<String>) 
+{
+    val last = 'E'
+    var alphabet = 'A'
+
+    for (i in 1..last - 'A' + 1) 
+{
+        for (j in 1..i) 
+{
+            print("$alphabet ")
+        }
+        ++alphabet
+
+        println()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
